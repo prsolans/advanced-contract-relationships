@@ -72,6 +72,16 @@ const TreeNode: React.FC<TreeNodeProps> = ({
         </div>
         
         <div className="node-right">
+          <a 
+            href={`https://apps-d.docusign.com/send/navigator/agreements/${contract.id}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="tree-document-link"
+            title="View in DocuSign"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View
+          </a>
           <span className={`status-dot ${contract.status.toLowerCase()}`} />
         </div>
       </div>

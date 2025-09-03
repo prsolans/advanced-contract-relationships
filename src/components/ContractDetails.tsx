@@ -24,14 +24,27 @@ const ContractDetails: React.FC<ContractDetailsProps> = ({ contract }) => {
   return (
     <div className="contract-details">
       <div className="contract-header">
-        <div className="contract-type-badge">
-          <span className={`badge ${contract.type.toLowerCase()}`}>
-            {contract.type}
-          </span>
+        <div className="header-badges">
+          <div className="contract-type-badge">
+            <span className={`badge ${contract.type.toLowerCase()}`}>
+              {contract.type}
+            </span>
+          </div>
+          <div className={`status-indicator ${contract.status.toLowerCase()}`}>
+            {contract.status}
+          </div>
         </div>
-        <h1 className="contract-title">{contract.title}</h1>
-        <div className={`status-indicator ${contract.status.toLowerCase()}`}>
-          {contract.status}
+        <div className="title-with-link">
+          <h1 className="contract-title">{contract.title}</h1>
+          <a 
+            href={`https://apps-d.docusign.com/send/navigator/agreements/${contract.id}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-document-link"
+            title="View in DocuSign"
+          >
+            View
+          </a>
         </div>
       </div>
 

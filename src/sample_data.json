@@ -1,0 +1,817 @@
+{
+  "agreements": [
+    {
+      "id": "54f67ba8-02c1-4eec-999d-09162008198d",
+      "title": "Master Service Agreement (MSA) MSA-99119",
+      "file_name": "Master Service Agreement (MSA) - MSA-99119.docx",
+      "type": "Msa",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "b00350a8-b757-472c-82e6-ec68ede376a8",
+          "name_in_agreement": "Woodward Reserves"
+        },
+        {
+          "id": "76545a8c-65e7-49ac-b85a-53d6dc921334",
+          "name_in_agreement": "Crystal Castle Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2022-09-15T00:00:00",
+        "expiration_date": "2025-09-15T00:00:00",
+        "term_length": "P3Y",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "payment_terms_due_date": "FORTY_FIVE_DAYS",
+        "can_charge_late_payment_fees": true,
+        "late_payment_fee_percent": 2,
+        "liability_cap_duration": "P1Y",
+        "renewal_notice_period": "P90D",
+        "renewal_notice_date": "2025-06-17T00:00:00",
+        "termination_period_for_cause": "P30D",
+        "termination_period_for_convenience": "P60D"
+      },
+      "custom_provisions": {
+        "c_DORAregulations": "Regulation (EU) 2022/2554",
+        "c_GovernmentContract": "False"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "f7084005-ad1d-4959-afd5-17d146d7da3d",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T19:19:22.619315Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-07-31T19:19:52.085377Z",
+        "modified_by": "s2s:models/models-esign-serviceaccount"
+      }
+    },
+    {
+      "id": "599e62cd-1c02-423b-9387-451837c77df7",
+      "title": "Statement of Work (SOW)",
+      "file_name": "Statement Of Work (SOW) - SOW-45723.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "b00350a8-b757-472c-82e6-ec68ede376a8",
+          "name_in_agreement": "Woodward Reserves"
+        },
+        {
+          "id": "76545a8c-65e7-49ac-b85a-53d6dc921334",
+          "name_in_agreement": "Crystal Castle Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2023-10-22T00:00:00",
+        "expiration_date": "2025-10-22T00:00:00",
+        "term_length": "P2Y",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 330427,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "THIRTY_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "MSA-99119",
+        "c_MSAEffectiveDate": "2022-09-15",
+        "c_ParentContractNumber": "MSA-99119",
+        "c_ParentContractEffectiveDate": "2022-09-15"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "25e35b66-1a72-4a05-b1a2-18564b78e157",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T19:19:22.52041Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.880205Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "7dbed6f7-dbe8-46af-95ce-e87f3b8e2125",
+      "title": "Master Service Agreement (MSA) MSA-95707",
+      "file_name": "Master Service Agreement (MSA) - MSA-95707.docx",
+      "type": "Msa",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "3d588e5a-ce05-44af-a1ad-231a10a3e556",
+          "name_in_agreement": "Romano Worldwide"
+        },
+        {
+          "id": "a969c5fa-cea1-4392-9900-91753a464dc4",
+          "name_in_agreement": "Little Lion Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-08-01T00:00:00",
+        "expiration_date": "2025-08-01T00:00:00",
+        "assignment_type": "NO_OR_CONSENT_REQUIRED",
+        "assignment_change_of_control": "NO_OR_CONSENT_REQUIRED",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "payment_terms_due_date": "FORTY_FIVE_DAYS",
+        "can_charge_late_payment_fees": true,
+        "late_payment_fee_percent": 1,
+        "liability_cap_multiplier": 2,
+        "renewal_notice_period": "P90D",
+        "renewal_notice_date": "2025-05-03T00:00:00",
+        "termination_period_for_cause": "P30D",
+        "termination_period_for_convenience": "P30D"
+      },
+      "custom_provisions": {
+        "c_DORAregulations": "Regulation (EU) 2022/2554"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "d8759fd6-7598-4e47-8397-4e0a40eb2c93",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T17:57:12.597078Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-07-31T18:56:38.896735Z",
+        "modified_by": "s2s:models/models-esign-serviceaccount"
+      }
+    },
+    {
+      "id": "403405c3-801d-4d9e-8c56-63846ae6206a",
+      "title": "Master Service Agreement",
+      "file_name": "Master Service Agreement (MSA) - CN-49583.docx",
+      "type": "Msa",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        },
+        {
+          "id": "c537946b-b839-4898-98af-62818611ea91",
+          "name_in_agreement": "El Camino Group"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2023-10-13T00:00:00",
+        "expiration_date": "2025-10-13T00:00:00",
+        "assignment_type": "NO_OR_CONSENT_REQUIRED",
+        "assignment_change_of_control": "YES_NOTICE_REQUIRED",
+        "governing_law": "District of Columbia",
+        "jurisdiction": "District of Columbia",
+        "payment_terms_due_date": "FORTY_FIVE_DAYS",
+        "can_charge_late_payment_fees": true,
+        "late_payment_fee_percent": 5,
+        "termination_period_for_cause": "P30D",
+        "termination_period_for_convenience": "P60D"
+      },
+      "custom_provisions": {
+        "c_GovernmentContract": "False"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "b7466e94-4405-4423-b60e-c060c136235f",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.522159Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-07-31T18:56:30.155856Z",
+        "modified_by": "s2s:models/models-esign-serviceaccount"
+      }
+    },
+    {
+      "id": "edbc098f-7bcc-4ff6-ba53-7f99e0d9450f",
+      "title": "Master Service Agreement",
+      "file_name": "Master Service Agreement (MSA) - CN-52662.docx",
+      "type": "Msa",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        },
+        {
+          "id": "2ef51037-2f8e-4b7d-a6f8-3c95d5b75b32",
+          "name_in_agreement": "High Violet Group"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2022-08-08T00:00:00",
+        "term_length": "P3Y",
+        "assignment_type": "NO_OR_CONSENT_REQUIRED",
+        "assignment_change_of_control": "YES_NOTICE_REQUIRED",
+        "governing_law": "United Kingdom",
+        "jurisdiction": "London",
+        "payment_terms_due_date": "THIRTY_DAYS",
+        "can_charge_late_payment_fees": true,
+        "late_payment_fee_percent": 2
+      },
+      "custom_provisions": {},
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "ab0241eb-bc4e-4112-b534-f015e41742e8",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.504825Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-07-31T18:57:04.850219Z",
+        "modified_by": "s2s:models/models-esign-serviceaccount"
+      }
+    },
+    {
+      "id": "3ccc73d3-b6c9-40c8-8d6f-3a03bef5f216",
+      "title": "Master Service Agreement",
+      "file_name": "Master Service Agreement (MSA) - CN-02050.docx",
+      "type": "Msa",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "bdd766f2-486b-4b39-9223-d14fb764c6a8",
+          "name_in_agreement": "Modern Age Ventures"
+        },
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-09-28T00:00:00",
+        "expiration_date": "2025-09-28T00:00:00",
+        "term_length": "P1Y",
+        "assignment_type": "YES_NOTICE_REQUIRED",
+        "assignment_change_of_control": "YES_NOTICE_REQUIRED",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "payment_terms_due_date": "SIXTY_DAYS",
+        "can_charge_late_payment_fees": true,
+        "termination_period_for_cause": "P90D",
+        "termination_period_for_convenience": "P60D"
+      },
+      "custom_provisions": {},
+      "related_agreement_documents": {},
+      "languages": [
+        "en",
+        "de"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "c4354bde-11af-44aa-9cbf-b61923e0a03a",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-30T20:42:26.926144Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-07-31T18:57:04.520653Z",
+        "modified_by": "s2s:models/models-esign-serviceaccount"
+      }
+    },
+    {
+      "id": "db0aab6c-10e2-4200-b98e-0e1a580e4094",
+      "title": "Statement of Work (SOW) SOW-97728",
+      "file_name": "Statement Of Work (SOW) - SOW-97728.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "b00350a8-b757-472c-82e6-ec68ede376a8",
+          "name_in_agreement": "Woodward Reserves"
+        },
+        {
+          "id": "76545a8c-65e7-49ac-b85a-53d6dc921334",
+          "name_in_agreement": "Crystal Castle Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2025-01-24T00:00:00",
+        "expiration_date": "2026-01-24T00:00:00",
+        "governing_law": "District of Columbia",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 218151,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "FORTY_FIVE_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "MSA-99119",
+        "c_MSAEffectiveDate": "2022-09-15",
+        "c_ParentContractNumber": "MSA-99119",
+        "c_ParentContractEffectiveDate": "2022-09-15"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "28cd9076-71ce-4c4b-a373-a78551ed6c4e",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T19:19:22.518268Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:52.808769Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "4313a37d-030e-4cd7-a767-5f5ad0ec52b6",
+      "title": "Change Order Agreement",
+      "file_name": "Change Order - CO-11301.docx",
+      "type": "ChangeOrder",
+      "category": "Miscellaneous",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "b00350a8-b757-472c-82e6-ec68ede376a8",
+          "name_in_agreement": "Woodward Reserves"
+        },
+        {
+          "id": "76545a8c-65e7-49ac-b85a-53d6dc921334",
+          "name_in_agreement": "Crystal Castle Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2023-01-01T00:00:00",
+        "expiration_date": "2026-01-02T00:00:00",
+        "assignment_type": "YES_NOTICE_REQUIRED",
+        "assignment_change_of_control": "YES_NOTICE_REQUIRED",
+        "governing_law": "United States",
+        "payment_terms_due_date": "THIRTY_DAYS",
+        "termination_period_for_convenience": "P30D"
+      },
+      "custom_provisions": {
+        "c_ParentContractNumber": "SOW-45723",
+        "c_ParentContractEffectiveDate": "2023-10-22"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "b9b919d5-21a2-4dba-b0f3-181a79ffc63b",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T19:19:22.515086Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.765027Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "c682a982-1880-4be5-91a6-0e81d632be57",
+      "title": "Statement of Work (SOW) SOW-70945",
+      "file_name": "Statement Of Work (SOW) - SOW-70945.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "a969c5fa-cea1-4392-9900-91753a464dc4",
+          "name_in_agreement": "Little Lion Holdings"
+        },
+        {
+          "id": "3d588e5a-ce05-44af-a1ad-231a10a3e556",
+          "name_in_agreement": "Romano Worldwide"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2022-12-24T00:00:00",
+        "expiration_date": "2025-12-24T00:00:00",
+        "term_length": "P3Y",
+        "assignment_type": "NO_OR_CONSENT_REQUIRED",
+        "assignment_change_of_control": "YES_WITH_CONDITIONS",
+        "governing_law": "[Country]",
+        "jurisdiction": "[Jurisdiction City]",
+        "total_agreement_value": 468845,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "OTHER"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "MSA-95707",
+        "c_MSAEffectiveDate": "2024-08-01",
+        "c_ParentContractNumber": "MSA-95707",
+        "c_ParentContractEffectiveDate": "2024-08-01"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "565ff185-c5ad-4549-a6bd-13275579af10",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T17:57:12.617461Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:52.741132Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "c602dfa9-3917-4012-abd7-a13739a6c31a",
+      "title": "Statement Of Work (SOW) SOW-01186",
+      "file_name": "Statement Of Work (SOW) - SOW-01186.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "3d588e5a-ce05-44af-a1ad-231a10a3e556",
+          "name_in_agreement": "Romano Worldwide"
+        },
+        {
+          "id": "a969c5fa-cea1-4392-9900-91753a464dc4",
+          "name_in_agreement": "Little Lion Holdings"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-09-30T00:00:00",
+        "expiration_date": "2025-09-30T00:00:00",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 111580,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "THIRTY_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "MSA-95707",
+        "c_MSAEffectiveDate": "2024-08-01",
+        "c_ParentContractNumber": "MSA-95707",
+        "c_ParentContractEffectiveDate": "2024-08-01"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "f3c2e5a3-5875-430f-b1bb-68cabf36c75a",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T17:57:12.607015Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:52.392541Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "57808217-8862-43ec-af15-070ee06e10d0",
+      "title": "Statement Of Work",
+      "file_name": "Statement Of Work (SOW) - CN-40941.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "2ef51037-2f8e-4b7d-a6f8-3c95d5b75b32",
+          "name_in_agreement": "High Violet Group"
+        },
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2023-10-29T00:00:00",
+        "expiration_date": "2025-10-29T00:00:00",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 193469,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "OTHER"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-52662",
+        "c_MSAEffectiveDate": "2022-08-08",
+        "c_ParentContractNumber": "CN-52662",
+        "c_ParentContractEffectiveDate": "2022-08-08"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en",
+        "de"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "8053e862-7af7-4c46-a909-28c6909a00cc",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.593533Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.851744Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "a96ce3a1-7dae-4743-b42c-d0fd46fccca4",
+      "title": "Statement of Work",
+      "file_name": "Statement Of Work (SOW) - CN-78017.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        },
+        {
+          "id": "c537946b-b839-4898-98af-62818611ea91",
+          "name_in_agreement": "El Camino Group"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2023-09-16T00:00:00",
+        "expiration_date": "2025-09-16T00:00:00",
+        "governing_law": "Washington, D.C.",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 211188,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "THIRTY_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-49583",
+        "c_MSAEffectiveDate": "2023-10-13T00:00:00",
+        "c_ParentContractNumber": "CN-49583",
+        "c_ParentContractEffectiveDate": "2023-10-13"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "fadbc73c-2b1e-466c-8e5e-f0d485a29db1",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.569734Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.753077Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "4e0946cc-083a-4786-b0bc-3ce022b9502f",
+      "title": "Statement of Work (SOW)",
+      "file_name": "Statement Of Work (SOW) - CN-64765.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "c537946b-b839-4898-98af-62818611ea91",
+          "name_in_agreement": "El Camino Group"
+        },
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-10-15T00:00:00",
+        "expiration_date": "2025-10-15T00:00:00",
+        "term_length": "P1Y",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 269556,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "OTHER"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-49583",
+        "c_MSAEffectiveDate": "2023-10-13",
+        "c_ParentContractNumber": "CN-49583",
+        "c_ParentContractEffectiveDate": "2023-10-13"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "49815c23-2c42-489a-b79f-c7310596ee62",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.509735Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:50.853136Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "7da37e6e-d9b9-4a64-8eb4-5859b6c6203c",
+      "title": "Change Order Agreement",
+      "file_name": "Change Order - CN-40186.docx",
+      "type": "ChangeOrder",
+      "category": "Miscellaneous",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        },
+        {
+          "id": "2ef51037-2f8e-4b7d-a6f8-3c95d5b75b32",
+          "name_in_agreement": "High Violet Group"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-08-07T00:00:00",
+        "governing_law": "United States",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 10000,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "SIXTY_DAYS"
+      },
+      "custom_provisions": {
+        "c_ParentContractNumber": "CN-52662",
+        "c_ParentContractEffectiveDate": "2022-08-08"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "d3daf7f7-2592-4799-b13a-6657f83ae070",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.509602Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.860705Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "dbb8f648-2606-41e7-a758-c046c7a7deeb",
+      "title": "Statement Of Work (SOW)",
+      "file_name": "Statement Of Work (SOW) - CN-90108.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        },
+        {
+          "id": "2ef51037-2f8e-4b7d-a6f8-3c95d5b75b32",
+          "name_in_agreement": "High Violet Group"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-08-14T00:00:00",
+        "expiration_date": "2025-08-14T00:00:00",
+        "assignment_type": "NO_OR_CONSENT_REQUIRED",
+        "governing_law": "Washington, D.C.",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 61352,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "THIRTY_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-52662",
+        "c_MSAEffectiveDate": "2022-08-08",
+        "c_GovernmentContract": "False",
+        "c_ParentContractNumber": "CN-52662",
+        "c_ParentContractEffectiveDate": "2022-08-08"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "156a046e-fb89-40fd-b476-17fe731f37ea",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-31T16:52:48.491885Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:52.698331Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "e1bb6b11-cfc4-45df-bfb2-a2eefb86d149",
+      "title": "Statement of Work (SOW)",
+      "file_name": "Statement Of Work (SOW) - CN-66221.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "bdd766f2-486b-4b39-9223-d14fb764c6a8",
+          "name_in_agreement": "Modern Age Ventures"
+        },
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2022-12-29T00:00:00",
+        "expiration_date": "2025-12-29T00:00:00",
+        "term_length": "P3Y",
+        "governing_law": "Washington, D.C.",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 202290,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "OTHER",
+        "renewal_notice_period": "P90D",
+        "renewal_notice_date": "2025-09-30T00:00:00"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-02050",
+        "c_MSAEffectiveDate": "2024-09-28",
+        "c_ParentContractNumber": "CN-02050",
+        "c_ParentContractEffectiveDate": "2024-09-28"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "8d02d09a-00a7-4f27-9ac7-dd50374a0c9d",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-30T20:42:26.921142Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.825693Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    },
+    {
+      "id": "67d16222-23f8-4c40-ba0a-eaac16ed9042",
+      "title": "Statement of Work (SOW)",
+      "file_name": "Statement Of Work (SOW) - CN-87447.docx",
+      "type": "Sow",
+      "category": "BusinessServices",
+      "status": "COMPLETE",
+      "review_status": "PENDING",
+      "parties": [
+        {
+          "id": "bdd766f2-486b-4b39-9223-d14fb764c6a8",
+          "name_in_agreement": "Modern Age Ventures"
+        },
+        {
+          "id": "ecfdee9a-9700-406d-b4d0-3a686bb9e98d",
+          "name_in_agreement": "Paul's Party"
+        }
+      ],
+      "provisions": {
+        "effective_date": "2024-08-25T00:00:00",
+        "expiration_date": "2025-08-25T00:00:00",
+        "term_length": "P1Y",
+        "governing_law": "Washington, D.C.",
+        "jurisdiction": "Washington, D.C.",
+        "total_agreement_value": 389368,
+        "total_agreement_value_currency_code": "USD",
+        "payment_terms_due_date": "FORTY_FIVE_DAYS"
+      },
+      "custom_provisions": {
+        "c_MSANumber": "CN-02050",
+        "c_MSAEffectiveDate": "2024-09-28",
+        "c_GovernmentContract": "False",
+        "c_ParentContractNumber": "CN-02050",
+        "c_ParentContractEffectiveDate": "2024-09-28"
+      },
+      "related_agreement_documents": {},
+      "languages": [
+        "en"
+      ],
+      "source_name": "UploadCenter",
+      "source_id": "04860d3f-964e-44ca-ab4f-49fdbe51404e",
+      "source_account_id": "9bb5a5f6-9bd2-4956-bacc-0bdc19387c91",
+      "metadata": {
+        "created_at": "2025-07-30T20:42:26.851787Z",
+        "created_by": "s2s:admi/admi-iam-transforms",
+        "modified_at": "2025-08-06T17:07:51.792399Z",
+        "modified_by": "s2s:security-services/access-management"
+      }
+    }
+  ]
+}

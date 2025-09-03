@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { industryDescriptions } from '../industryData';
+import { realContractDescriptions, contractFamilies } from '../realContractData';
 
 const Homepage: React.FC = () => {
   return (
     <div className="homepage">
       <header className="homepage-header">
-        <h1>Contract Family Relationships</h1>
+        <h1>Master Service Agreement Families</h1>
         <p className="homepage-subtitle">
-          Explore industry-specific contract hierarchies and relationships
+          Explore multi-tier MSA contract hierarchies with SOWs and Change Orders
         </p>
       </header>
 
       <div className="industry-grid">
-        {Object.entries(industryDescriptions).map(([industry, details]) => (
+        {Object.entries(realContractDescriptions).map(([contractFamily, details]) => (
           <Link 
-            key={industry} 
-            to={`/industry/${industry.toLowerCase()}`}
+            key={contractFamily} 
+            to={`/contracts/${contractFamily.toLowerCase().replace(/\s+/g, '-')}`}
             className="industry-card"
           >
             <div className="industry-card-header">
@@ -33,7 +33,7 @@ const Homepage: React.FC = () => {
             <div className="key-features">
               <h4>Key Features:</h4>
               <ul>
-                {details.keyFeatures.map((feature, index) => (
+                {details.keyFeatures.map((feature: string, index: number) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>
@@ -41,7 +41,7 @@ const Homepage: React.FC = () => {
 
             <div className="industry-card-footer">
               <span className="explore-link">
-                Explore {industry} Contracts →
+                Explore {contractFamily} →
               </span>
             </div>
           </Link>
@@ -51,20 +51,20 @@ const Homepage: React.FC = () => {
       <footer className="homepage-footer">
         <div className="stats-grid">
           <div className="stat-item">
-            <div className="stat-number">6</div>
-            <div className="stat-label">Industries</div>
+            <div className="stat-number">5</div>
+            <div className="stat-label">MSA Families</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">24+</div>
+            <div className="stat-number">17</div>
+            <div className="stat-label">Hierarchical Contracts</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">1</div>
+            <div className="stat-label">Multi-Tier Chain</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">3</div>
             <div className="stat-label">Contract Types</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">4</div>
-            <div className="stat-label">Hierarchy Levels</div>
-          </div>
-          <div className="stat-item">
-            <div className="stat-number">Real-time</div>
-            <div className="stat-label">Relationship Views</div>
           </div>
         </div>
       </footer>

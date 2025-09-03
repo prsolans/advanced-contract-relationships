@@ -52,9 +52,41 @@ body {
   border-bottom: 2px solid #e2e8f0;
 }
 
+.header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Title with inline document link */
+.title-with-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.inline-document-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.inline-document-link:hover {
+  opacity: 1;
+  background: #f1f5f9;
+  transform: scale(1.05);
+}
+
 .contract-type-badge .badge {
   padding: 4px 12px;
-  border-radius: 12px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -259,7 +291,7 @@ body {
 .milestone-status {
   font-size: 12px;
   padding: 4px 8px;
-  border-radius: 12px;
+  border-radius: 6px;
   font-weight: 500;
 }
 
@@ -455,6 +487,25 @@ body {
 .node-right {
   display: flex;
   align-items: center;
+  gap: 8px;
+}
+
+.tree-document-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+
+.tree-document-link:hover {
+  opacity: 1;
+  background: #f1f5f9;
+  transform: scale(1.1);
 }
 
 .status-dot {
@@ -557,7 +608,7 @@ body {
   background: linear-gradient(45deg, #667eea, #764ba2);
   color: white;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 6px;
   font-size: 12px;
   font-weight: 500;
   display: inline-block;
@@ -711,6 +762,23 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 16px;
+}
+
+.contract-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  padding: 6px 12px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
 }
 
 .hierarchy-label {
