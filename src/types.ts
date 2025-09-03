@@ -111,3 +111,60 @@ export interface ContractHierarchy {
   contracts: ContractData[];
   selectedContractId?: string;
 }
+
+// New family-level data architecture
+export interface ContractFamily {
+  id: string; // MSA contract number
+  masterAgreement: ContractData;
+  familyMetrics: {
+    totalFamilyValue: number; // Sum of all SOW/CO values
+    totalContracts: number;
+    activeSowCount: number;
+    totalChangeOrders: number;
+    familySpan: { start: string; end?: string }; // Min effective to max expiration
+    avgRiskLevel: 'Low' | 'Medium' | 'High' | 'Critical';
+  };
+  governanceFramework: {
+    governingLaw: string; // From MSA
+    jurisdiction: string; // From MSA
+    defaultPaymentTerms: string; // From MSA
+    terminationRights?: string; // From MSA if available
+    complianceFlags: string[]; // Government contract, regulations, etc.
+    liabilityFramework?: {
+      capAmount?: number;
+      capCurrency?: string;
+      capDuration?: string;
+    };
+  };
+  businessContext: {
+    parties: ContractParty[]; // Primary contracting entities
+    businessUnit?: string;
+    contractManager?: string;
+    industryCategory: string;
+    relationshipType: 'Strategic Partnership' | 'Vendor' | 'Service Provider' | 'Government Contract';
+  };
+  children: ContractData[];
+}
+
+// Enhanced contract document with inheritance
+export interface EnhancedContractData extends ContractData {
+  familyId?: string; // Reference to parent family
+  inheritedTerms: {
+    usesParentGovernance: boolean;
+    governingLaw: string; // Inherited or overridden
+    jurisdiction: string; // Inherited or overridden  
+    paymentTerms: string; // Inherited or overridden
+  };
+  projectExecution?: {
+    deliverables?: string[];
+    milestones?: { date: string; description: string; completed: boolean }[];
+    performanceMetrics?: string[];
+    specificCompliance?: string[];
+  };
+  documentLevel: 'MSA' | 'SOW' | 'ChangeOrder' | 'Amendment' | 'Other';
+  contractRelationships?: {
+    parentContractNumber?: string;
+    childContractNumbers?: string[];
+    amendmentNumbers?: string[];
+  };
+}

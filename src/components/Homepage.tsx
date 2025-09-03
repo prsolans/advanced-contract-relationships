@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { realContractDescriptions, contractFamilies } from '../realContractData';
+import { familyDescriptions, contractFamilies } from '../contractFamilyData';
 
 const Homepage: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Homepage: React.FC = () => {
       </header>
 
       <div className="industry-grid">
-        {Object.entries(realContractDescriptions).map(([contractFamily, details]) => (
+        {Object.entries(familyDescriptions).map(([contractFamily, details]) => (
           <Link 
             key={contractFamily} 
             to={`/contracts/${contractFamily.toLowerCase().replace(/\s+/g, '-')}`}
@@ -51,20 +51,26 @@ const Homepage: React.FC = () => {
       <footer className="homepage-footer">
         <div className="stats-grid">
           <div className="stat-item">
-            <div className="stat-number">5</div>
+            <div className="stat-number">{contractFamilies.length}</div>
             <div className="stat-label">MSA Families</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">17</div>
-            <div className="stat-label">Hierarchical Contracts</div>
+            <div className="stat-number">
+              {contractFamilies.reduce((sum, family) => sum + family.familyMetrics.totalContracts, 0)}
+            </div>
+            <div className="stat-label">Total Contracts</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">1</div>
-            <div className="stat-label">Multi-Tier Chain</div>
+            <div className="stat-number">
+              ${Math.round(contractFamilies.reduce((sum, family) => sum + family.familyMetrics.totalFamilyValue, 0) / 1000000)}M
+            </div>
+            <div className="stat-label">Combined Value</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">3</div>
-            <div className="stat-label">Contract Types</div>
+            <div className="stat-number">
+              {contractFamilies.reduce((sum, family) => sum + family.familyMetrics.activeSowCount, 0)}
+            </div>
+            <div className="stat-label">Active SOWs</div>
           </div>
         </div>
       </footer>

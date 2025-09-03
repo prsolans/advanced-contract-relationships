@@ -62,7 +62,16 @@ body {
 .title-with-link {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
+}
+
+.title-with-link h1 {
+  flex: 1;
+}
+
+.title-with-link .inline-document-link {
+  margin-right: 12px;
 }
 
 .inline-document-link {
@@ -779,6 +788,588 @@ body {
   font-size: 12px;
   font-weight: 500;
   color: #475569;
+}
+
+/* Family Dashboard Styles */
+.family-dashboard {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.family-header {
+  margin-bottom: 16px;
+}
+
+.family-title-section .family-parties {
+  margin-top: 12px;
+}
+
+.family-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.relationship-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.family-parties {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  font-size: 14px;
+}
+
+.party-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.party-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.party-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.party-separator {
+  font-size: 18px;
+  color: #64748b;
+  margin: 0 8px;
+}
+
+.family-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metric-card.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+}
+
+.metric-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.metric-card.primary .metric-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.metric-value.timeline {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.timeline-end {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.metric-label {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.governance-section,
+.business-context {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.governance-section h3,
+.business-context h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.governance-grid,
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.governance-item,
+.context-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.governance-item label,
+.context-item label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.governance-item span,
+.context-item span {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.compliance-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.compliance-section h4 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.compliance-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.compliance-badge {
+  padding: 4px 10px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* View Toggle Styles */
+.view-toggle {
+  display: flex;
+  gap: 4px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.toggle-btn.active {
+  background: #ffffff;
+  color: #1e293b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Integrated Family Viewer Layout */
+.integrated-family-viewer {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.family-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 24px;
+}
+
+.dashboard-section {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.contracts-section {
+  display: flex;
+  min-height: calc(100vh - 200px);
+  background: #f8fafc;
+}
+
+.contracts-sidebar {
+  width: 30%;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.contract-details-pane {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+/* Adjust Family Dashboard for full-width layout */
+.dashboard-section .family-dashboard {
+  max-width: none;
+  padding: 32px 24px;
+}
+
+/* Adjust Contract Tree for sidebar */
+.contracts-sidebar .contract-tree {
+  padding: 16px;
+}
+
+.contracts-sidebar .tree-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+/* Adjust Enhanced Contract Details for right pane */
+.contract-details-pane .enhanced-contract-details {
+  margin-bottom: 0;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Contract Details Styles */
+.enhanced-contract-details {
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.document-level-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inheritance-section,
+.family-context-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.inheritance-section h3,
+.family-context-section h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.inheritance-grid,
+.context-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.inheritance-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inheritance-item label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.inheritance-item span.inherited {
+  color: #059669;
+  font-weight: 500;
+}
+
+.inheritance-item span.overridden {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.inheritance-indicator {
+  font-size: 11px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Header Main Row Layout */
+.header-main-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.family-title-section {
+  flex: 0 0 30%;
+  max-width: 30%;
+  min-width: 0;
+}
+
+/* Header Governance and Context Layout */
+.header-governance-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+  min-width: 0;
+}
+
+.governance-section.compact,
+.business-context.compact {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.governance-section.compact h3,
+.business-context.compact h3 {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.governance-section.compact .governance-grid,
+.business-context.compact .context-grid {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.governance-section.compact .governance-item,
+.business-context.compact .context-item {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.governance-section.compact .governance-item label,
+.business-context.compact .context-item label {
+  font-size: 11px;
+}
+
+.governance-section.compact .governance-item span,
+.business-context.compact .context-item span {
+  font-size: 13px;
+}
+
+.governance-section.compact .compliance-section {
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.governance-section.compact {
+  padding-right: 16px;
+  border-right: 1px solid #e2e8f0;
+}
+
+/* Tooltip Styles */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1000;
+  padding: 12px 16px;
+  background: #1e293b;
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  width: 400px;
+  min-width: 400px;
+  white-space: normal;
+  word-wrap: break-word;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.tooltip-bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+.tooltip-left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.tooltip-right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.tooltip-arrow-top {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1e293b;
+}
+
+.tooltip-arrow-bottom {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #1e293b;
+}
+
+.tooltip-arrow-left {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #1e293b;
+}
+
+.tooltip-arrow-right {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #1e293b;
+}
+
+.tooltip-trigger {
+  cursor: help;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.tooltip-trigger .help-icon {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.help-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #64748b;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.help-icon:hover {
+  opacity: 1;
+  background: #475569;
 }
 
 .hierarchy-label {
