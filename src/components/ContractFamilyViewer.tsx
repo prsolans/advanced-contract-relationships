@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ContractData, EnhancedContractData } from '../types';
-import { contractFamilies, getEnhancedFamilyContracts } from '../contractFamilyData';
+import { combinedContractFamilies, getCombinedEnhancedContracts } from '../combinedContractData';
 import EnhancedContractDetails from './EnhancedContractDetails';
 import ContractTree from './ContractTree';
 import FamilyDashboard from './FamilyDashboard';
@@ -23,10 +23,10 @@ const ContractFamilyViewer: React.FC = () => {
       .filter(Boolean)
       .join('-') : '';
   
-  const contractFamily = contractFamilies.find(f => f.id === familyId);
+  const contractFamily = combinedContractFamilies.find(f => f.id === familyId);
   
   const contracts = contractFamily ? [contractFamily.masterAgreement] : [];
-  const enhancedContracts = contractFamily ? getEnhancedFamilyContracts(contractFamily.id) : [];
+  const enhancedContracts = contractFamily ? getCombinedEnhancedContracts(contractFamily.id) : [];
 
   const [selectedContract, setSelectedContract] = useState<ContractData | null>(
     contracts[0] || null
@@ -38,9 +38,11 @@ const ContractFamilyViewer: React.FC = () => {
   const handleContractSelect = (contract: ContractData) => {
     setSelectedContract(contract);
     // Find the corresponding enhanced contract
-    const enhanced = enhancedContracts.find(ec => ec.id === contract.id);
-    if (enhanced) {
-      setSelectedEnhancedContract(enhanced);
+    if (Array.isArray(enhancedContracts)) {
+      const enhanced = enhancedContracts.find((ec: any) => ec.id === contract.id);
+      if (enhanced) {
+        setSelectedEnhancedContract(enhanced);
+      }
     }
   };
 

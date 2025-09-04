@@ -1,15 +1,38 @@
 // Real contract types from sample_data.json analysis
 export type ContractType = 
   | 'Msa'
+  | 'MSA' // Legacy format
   | 'ServicesAgreement' 
   | 'Sow'
+  | 'SOW' // Legacy format
   | 'Nda'
   | 'ChangeOrder'
   | 'Consulting'
   | 'License'
   | 'Purchase'
+  | 'PurchaseOrder'
   | 'Lease'
   | 'Amendment'
+  | 'PrimeContract'
+  | 'PrimeConstruction'
+  | 'Subcontract'
+  | 'SubcontractMSA'
+  | 'FlowdownAmendment'
+  | 'MasterAffiliation'
+  | 'FacilityAgreement'
+  | 'PhysicianAgreement'
+  | 'CompensationSchedule'
+  | 'SLA'
+  | 'TradeAgreement'
+  | 'ConstructionAmendment'
+  | 'EnergyMSA'
+  | 'ProjectAgreement'
+  | 'WorkOrder'
+  | 'FieldTicket'
+  | 'MasterTradingAgreement'
+  | 'ProductSchedule'
+  | 'TransactionConfirmation'
+  | 'Novation'
   | 'Other';
 
 // Real contract data interface based on sample_data.json structure

@@ -118,29 +118,44 @@ const EnhancedContractDetails: React.FC<EnhancedContractDetailsProps> = ({ contr
         <div className="inheritance-grid">
           <div className="inheritance-item">
             <label>Governing Law:</label>
-            <span className={family && contract.governingLaw === family.governanceFramework.governingLaw ? 'inherited' : 'overridden'}>
+            <span className={
+              (!contract.parentContractId) ? 'establishes' : 
+              (family && contract.governingLaw === family.governanceFramework.governingLaw ? 'inherited' : 'overridden')
+            }>
               {contract.inheritedTerms.governingLaw}
-              {family && contract.governingLaw === family.governanceFramework.governingLaw ? 
-                <span className="inheritance-indicator"> (inherited from MSA)</span> :
-                <span className="inheritance-indicator"> (override)</span>}
+              {(!contract.parentContractId) ? 
+                <span className="inheritance-indicator"> (establishes framework)</span> :
+                (family && contract.governingLaw === family.governanceFramework.governingLaw ? 
+                  <span className="inheritance-indicator"> (inherited from parent)</span> :
+                  <span className="inheritance-indicator"> (override)</span>)}
             </span>
           </div>
           <div className="inheritance-item">
             <label>Jurisdiction:</label>
-            <span className={family && contract.jurisdiction === family.governanceFramework.jurisdiction ? 'inherited' : 'overridden'}>
+            <span className={
+              (!contract.parentContractId) ? 'establishes' : 
+              (family && contract.jurisdiction === family.governanceFramework.jurisdiction ? 'inherited' : 'overridden')
+            }>
               {contract.inheritedTerms.jurisdiction}
-              {family && contract.jurisdiction === family.governanceFramework.jurisdiction ? 
-                <span className="inheritance-indicator"> (inherited from MSA)</span> :
-                <span className="inheritance-indicator"> (override)</span>}
+              {(!contract.parentContractId) ? 
+                <span className="inheritance-indicator"> (establishes framework)</span> :
+                (family && contract.jurisdiction === family.governanceFramework.jurisdiction ? 
+                  <span className="inheritance-indicator"> (inherited from parent)</span> :
+                  <span className="inheritance-indicator"> (override)</span>)}
             </span>
           </div>
           <div className="inheritance-item">
             <label>Payment Terms:</label>
-            <span className={family && contract.paymentTerms === family.governanceFramework.defaultPaymentTerms ? 'inherited' : 'overridden'}>
+            <span className={
+              (!contract.parentContractId) ? 'establishes' : 
+              (family && contract.paymentTerms === family.governanceFramework.defaultPaymentTerms ? 'inherited' : 'overridden')
+            }>
               {contract.inheritedTerms.paymentTerms}
-              {family && contract.paymentTerms === family.governanceFramework.defaultPaymentTerms ? 
-                <span className="inheritance-indicator"> (inherited from MSA)</span> :
-                <span className="inheritance-indicator"> (override)</span>}
+              {(!contract.parentContractId) ? 
+                <span className="inheritance-indicator"> (establishes framework)</span> :
+                (family && contract.paymentTerms === family.governanceFramework.defaultPaymentTerms ? 
+                  <span className="inheritance-indicator"> (inherited from parent)</span> :
+                  <span className="inheritance-indicator"> (override)</span>)}
             </span>
           </div>
         </div>

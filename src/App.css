@@ -1247,6 +1247,15 @@ body {
   font-weight: 500;
 }
 
+.inheritance-item span.establishes {
+  color: #7c3aed;
+  font-weight: 600;
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border-left: 3px solid #7c3aed;
+}
+
 .inheritance-indicator {
   font-size: 11px;
   opacity: 0.7;
