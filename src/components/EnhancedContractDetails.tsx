@@ -23,6 +23,56 @@ const EnhancedContractDetails: React.FC<EnhancedContractDetailsProps> = ({ contr
     });
   };
 
+  const isWithin90Days = (dateString: string) => {
+    const targetDate = new Date(dateString);
+    const today = new Date();
+    const diffTime = targetDate.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays >= 0 && diffDays <= 90;
+  };
+
+  const getRiskExplanation = (contractType: string) => {
+    const baseExplanation = "Risk levels are calculated using multiple weighted factors: ";
+    
+    switch (contractType.toLowerCase()) {
+      case 'msa':
+        return baseExplanation + "For Master Service Agreements (MSA): " +
+               "• CONTRACT VALUE: >$5M = Critical, >$2M = High, >$500K = Medium, <$500K = Low " +
+               "• STRATEGIC IMPACT: Foundation for all SOWs - inherent Medium+ risk " +
+               "• GOVERNANCE SCOPE: Broad legal framework affecting multiple projects " +
+               "• COMPLIANCE: Government contracts automatically = Critical " +
+               "• VENDOR RELATIONSHIP: Strategic partnerships weighted higher than standard vendors " +
+               "• TERMINATION IMPACT: Affects entire contract family";
+               
+      case 'sow':
+        return baseExplanation + "For Statements of Work (SOW): " +
+               "• CONTRACT VALUE: >$2M = High, >$1M = Medium, >$250K = Low, <$250K = Low " +
+               "• DELIVERY COMPLEXITY: Multiple milestones/deliverables increase risk " +
+               "• PERFORMANCE METRICS: SLAs and KPIs with penalties = Higher risk " +
+               "• PROJECT DURATION: >12 months = Higher risk due to scope creep potential " +
+               "• VENDOR PERFORMANCE: Historical ratings from 1-5 scale affect scoring " +
+               "• BUSINESS CRITICALITY: Core business functions = Higher risk";
+               
+      case 'changeorder':
+        return baseExplanation + "For Change Orders: " +
+               "• BUDGET IMPACT: >50% of original SOW value = High, >25% = Medium " +
+               "• SCOPE CHANGE: Major deliverable changes = Higher risk " +
+               "• TIMELINE IMPACT: Schedule extensions >30 days = Medium+ risk " +
+               "• CUMULATIVE EFFECT: Multiple COs on same SOW compound risk " +
+               "• APPROVAL LEVEL: Executive approval required = Higher inherent risk " +
+               "• VENDOR RELATIONSHIP: Performance issues driving changes = Higher risk";
+               
+      default:
+        return baseExplanation + "For this document type: " +
+               "• CONTRACT VALUE: Financial thresholds based on document type and industry standards " +
+               "• COMPLIANCE REQUIREMENTS: Regulatory obligations increase risk scoring " +
+               "• BUSINESS IMPACT: Strategic importance to operations and revenue " +
+               "• VENDOR PERFORMANCE: Historical delivery and relationship quality " +
+               "• OPERATIONAL COMPLEXITY: Integration requirements and dependencies " +
+               "• RENEWAL/TERMINATION: Difficulty of replacement or transition";
+    }
+  };
+
   const getDocumentLevelColor = (level: string) => {
     const colors = {
       'MSA': '#8b5cf6',
@@ -36,38 +86,6 @@ const EnhancedContractDetails: React.FC<EnhancedContractDetailsProps> = ({ contr
 
   return (
     <div className="enhanced-contract-details">
-      {/* Family Context */}
-      {family && (
-        <div className="family-context-section">
-          <h3>Family Context</h3>
-          <div className="context-summary">
-            <div className="context-item">
-              <label>Family ID:</label>
-              <span>{family.id}</span>
-            </div>
-            <div className="context-item">
-              <label>Relationship Type:</label>
-              <span>{family.businessContext.relationshipType}</span>
-            </div>
-            <div className="context-item">
-              <label>Family Total Value:</label>
-              <span>{formatCurrency(family.familyMetrics.totalFamilyValue)}</span>
-            </div>
-            <div className="context-item">
-              <Tooltip content="Risk level is calculated based on: (1) Total family value - >$2M = High, >$500K = Medium, <$500K = Low; (2) Government contract status - Critical if any contract flagged as government; (3) Compliance requirements - Critical if >2 different types. Compliance requirements are shown in the 'Compliance Requirements' badges below when present (e.g., Government Contract, GDPR, SOX).">
-                <div className="tooltip-trigger">
-                  <label>Family Risk Level:</label>
-                  <div className="help-icon">?</div>
-                </div>
-              </Tooltip>
-              <span className={`risk-level ${family.familyMetrics.avgRiskLevel.toLowerCase()}`}>
-                {family.familyMetrics.avgRiskLevel}
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
-
       <div className="contract-header">
         <div className="header-badges">
           <div className="contract-type-badge">
@@ -227,6 +245,134 @@ const EnhancedContractDetails: React.FC<EnhancedContractDetailsProps> = ({ contr
               </div>
             )}
           </>
+        )}
+
+        {/* Contract Management */}
+        <div className="detail-section">
+          <h3>Contract Management</h3>
+          {contract.contractManager && (
+            <div className="detail-item">
+              <label>Contract Manager:</label>
+              <span>{contract.contractManager}</span>
+            </div>
+          )}
+          {contract.businessUnit && (
+            <div className="detail-item">
+              <label>Business Unit:</label>
+              <span>{contract.businessUnit}</span>
+            </div>
+          )}
+          {contract.projectCode && (
+            <div className="detail-item">
+              <label>Project Code:</label>
+              <span className="code-highlight">{contract.projectCode}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Risk Assessment */}
+        <div className="detail-section">
+          <h3>Risk Assessment</h3>
+          {contract.riskLevel && (
+            <div className="detail-item">
+              <Tooltip content={getRiskExplanation(contract.type)}>
+                <div className="tooltip-trigger">
+                  <label>Risk Level:</label>
+                  <div className="help-icon">?</div>
+                </div>
+              </Tooltip>
+              <span className={`risk-badge ${contract.riskLevel.toLowerCase()}`}>
+                {contract.riskLevel}
+              </span>
+            </div>
+          )}
+          {contract.vendorRating && (
+            <div className="detail-item">
+              <Tooltip content="Vendor rating reflects overall performance assessment including delivery quality, timeliness, communication effectiveness, compliance adherence, and relationship management. Ratings are typically updated quarterly based on performance reviews and stakeholder feedback.">
+                <div className="tooltip-trigger">
+                  <label>Vendor Rating:</label>
+                  <div className="help-icon">?</div>
+                </div>
+              </Tooltip>
+              <span className="rating-highlight">{contract.vendorRating}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Legal Terms */}
+        <div className="detail-section">
+          <h3>Legal Terms</h3>
+          <div className="detail-item">
+            <label>Termination Clause:</label>
+            <span className="legal-text">{contract.terminationClause}</span>
+          </div>
+          <div className="detail-item">
+            <label>Confidentiality:</label>
+            <span className="legal-text">{contract.confidentialityClause}</span>
+          </div>
+          <div className="detail-item">
+            <label>Indemnification:</label>
+            <span className="legal-text">{contract.indemnificationClause}</span>
+          </div>
+        </div>
+
+        {/* Renewal & Approval */}
+        <div className="detail-section">
+          <h3>Renewal & Approval</h3>
+          {contract.expirationDate && (
+            <div className="detail-item">
+              <label>Contract Expiration:</label>
+              <span className={contract.expirationDate && isWithin90Days(contract.expirationDate) ? 'expiration-warning' : ''}>
+                {formatDate(contract.expirationDate)}
+                {contract.expirationDate && isWithin90Days(contract.expirationDate) && (
+                  <span className="urgency-indicator"> ⚠️ Expires Soon</span>
+                )}
+              </span>
+            </div>
+          )}
+          {/* Check for renewal_notice_date from provisions */}
+          {(contract as any).provisions?.renewal_notice_date && (
+            <div className="detail-item">
+              <Tooltip content="Renewal notice date indicates the deadline by which either party must provide notice of intent to renew or terminate the contract. Missing this deadline may result in automatic renewal or termination depending on contract terms.">
+                <div className="tooltip-trigger">
+                  <label>Renewal Notice Due:</label>
+                  <div className="help-icon">?</div>
+                </div>
+              </Tooltip>
+              <span className={(contract as any).provisions.renewal_notice_date && isWithin90Days((contract as any).provisions.renewal_notice_date) ? 'renewal-notice-urgent' : ''}>
+                {formatDate((contract as any).provisions.renewal_notice_date)}
+                {(contract as any).provisions.renewal_notice_date && isWithin90Days((contract as any).provisions.renewal_notice_date) && (
+                  <span className="urgency-indicator"> 🔔 Action Required</span>
+                )}
+              </span>
+            </div>
+          )}
+          {contract.renewalNotice && (
+            <div className="detail-item">
+              <label>Renewal Terms:</label>
+              <span className="legal-text">{contract.renewalNotice}</span>
+            </div>
+          )}
+          {contract.approvalAuthority && (
+            <div className="detail-item">
+              <label>Approval Authority:</label>
+              <span>{contract.approvalAuthority}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Compliance Requirements */}
+        {contract.complianceRequirements && contract.complianceRequirements.length > 0 && (
+          <div className="detail-section">
+            <h3>Compliance Requirements</h3>
+            <div className="compliance-list">
+              {contract.complianceRequirements.map((requirement, index) => (
+                <div key={index} className="compliance-badge">
+                  {requirement}
+                </div>
+              ))}
+            </div>
+          </div>
         )}
 
         {/* Contract relationships */}

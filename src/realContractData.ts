@@ -167,8 +167,376 @@ const buildContractHierarchy = (): ContractData[] => {
   });
 };
 
-// Export the processed contract data
-export const realContractFamilies = buildContractHierarchy();
+// Create additional synthetic contract families with 3+ levels
+const createSyntheticContractFamilies = (): ContractData[] => {
+  // Family 1: Cloud Infrastructure Services - MSA → SOW → Change Orders → Amendments
+  const cloudInfraMSA: ContractData = {
+    id: 'MSA-2024-CI-001',
+    type: 'Msa',
+    title: 'Master Service Agreement - Cloud Infrastructure Services',
+    contractNumber: 'MSA-2024-CI',
+    firstParty: 'TechCorp Enterprise Solutions',
+    thirdParty: 'CloudVault Technologies Inc.',
+    effectiveDate: '2024-01-15',
+    expirationDate: '2027-01-14',
+    governingLaw: 'Delaware',
+    jurisdiction: 'Delaware State Courts',
+    paymentTerms: 'Net 45 days',
+    terminationClause: '90 days written notice required by either party. Immediate termination for material breach after 30-day cure period.',
+    confidentialityClause: 'All technical specifications, pricing models, and performance metrics shall remain confidential for 5 years post-termination.',
+    indemnificationClause: 'Each party indemnifies against third-party claims arising from their negligent acts or willful misconduct.',
+    status: 'Active',
+    totalValue: 8500000,
+    currency: 'USD',
+    industry: 'Business Services',
+    contractManager: 'Sarah Chen',
+    renewalNotice: 'Either party may provide 180 days written notice of intent not to renew',
+    riskLevel: 'Critical',
+    vendorRating: 'A+ (4.8/5.0)',
+    businessUnit: 'Infrastructure & Operations',
+    projectCode: 'INFRA-2024-CI',
+    approvalAuthority: 'CTO Office',
+    complianceRequirements: ['SOC2 Type II', 'ISO 27001', 'GDPR', 'SOX'],
+    children: [
+      {
+        id: 'SOW-2024-CI-PROD',
+        type: 'Sow',
+        title: 'Production Environment Migration & Management',
+        contractNumber: 'SOW-2024-CI-001',
+        parentContractId: 'MSA-2024-CI',
+        firstParty: 'TechCorp Enterprise Solutions',
+        thirdParty: 'CloudVault Technologies Inc.',
+        effectiveDate: '2024-02-01',
+        expirationDate: '2026-01-31',
+        governingLaw: 'Delaware',
+        jurisdiction: 'Delaware State Courts',
+        paymentTerms: 'Net 45 days',
+        terminationClause: '90 days written notice required by either party. Immediate termination for material breach after 30-day cure period.',
+        confidentialityClause: 'All technical specifications, pricing models, and performance metrics shall remain confidential for 5 years post-termination.',
+        indemnificationClause: 'Each party indemnifies against third-party claims arising from their negligent acts or willful misconduct.',
+        status: 'Active',
+        totalValue: 3200000,
+        currency: 'USD',
+        industry: 'Business Services',
+        contractManager: 'Sarah Chen',
+        riskLevel: 'High',
+        vendorRating: 'A+ (4.8/5.0)',
+        businessUnit: 'Infrastructure & Operations',
+        projectCode: 'INFRA-2024-CI-PROD',
+        deliverables: [
+          'Complete migration of 450+ production servers to cloud infrastructure',
+          '24/7 monitoring and alerting system implementation',
+          'Disaster recovery and backup solutions deployment',
+          'Performance optimization and cost management tools'
+        ],
+        keyMilestones: [
+          { date: '2024-03-15', description: 'Phase 1: Core systems migration', completed: true },
+          { date: '2024-06-01', description: 'Phase 2: Application tier migration', completed: true },
+          { date: '2024-09-15', description: 'Phase 3: Data tier migration', completed: false },
+          { date: '2024-12-01', description: 'Final optimization and handover', completed: false }
+        ],
+        children: [
+          {
+            id: 'CO-2024-CI-SEC',
+            type: 'ChangeOrder',
+            title: 'Enhanced Security Compliance Package',
+            contractNumber: 'CO-2024-CI-001',
+            parentContractId: 'SOW-2024-CI-001',
+            firstParty: 'TechCorp Enterprise Solutions',
+            thirdParty: 'CloudVault Technologies Inc.',
+            effectiveDate: '2024-05-01',
+            expirationDate: '2026-01-31',
+            governingLaw: 'Delaware',
+            jurisdiction: 'Delaware State Courts',
+            paymentTerms: 'Net 45 days',
+            terminationClause: 'Tied to parent SOW termination provisions',
+            confidentialityClause: 'Enhanced confidentiality for security audit data and vulnerability assessments',
+            indemnificationClause: 'Enhanced indemnification for security-related incidents',
+            status: 'Active',
+            totalValue: 750000,
+            currency: 'USD',
+            industry: 'Business Services',
+            contractManager: 'Sarah Chen',
+            riskLevel: 'High',
+            businessUnit: 'Infrastructure & Operations',
+            projectCode: 'INFRA-2024-CI-SEC',
+            deliverables: [
+              'Advanced threat detection and response system',
+              'Zero-trust network architecture implementation',
+              'Quarterly penetration testing and vulnerability assessments',
+              'Compliance automation for SOC2 and ISO 27001'
+            ],
+            children: [
+              {
+                id: 'AMD-2024-CI-SEC-EXT',
+                type: 'Amendment',
+                title: 'Security Package Timeline Extension',
+                contractNumber: 'AMD-2024-CI-001',
+                parentContractId: 'CO-2024-CI-001',
+                firstParty: 'TechCorp Enterprise Solutions',
+                thirdParty: 'CloudVault Technologies Inc.',
+                effectiveDate: '2024-08-15',
+                expirationDate: '2026-01-31',
+                governingLaw: 'Delaware',
+                jurisdiction: 'Delaware State Courts',
+                paymentTerms: 'Net 45 days',
+                terminationClause: 'Follows parent Change Order provisions',
+                confidentialityClause: 'Same as parent Change Order',
+                indemnificationClause: 'Same as parent Change Order',
+                status: 'Active',
+                totalValue: 125000,
+                currency: 'USD',
+                industry: 'Business Services',
+                contractManager: 'Sarah Chen',
+                riskLevel: 'Medium',
+                businessUnit: 'Infrastructure & Operations',
+                projectCode: 'INFRA-2024-CI-SEC-EXT',
+                renewalNotice: 'No renewal required - one-time amendment'
+              }
+            ]
+          },
+          {
+            id: 'CO-2024-CI-SCALE',
+            type: 'ChangeOrder',
+            title: 'Additional Capacity Scaling Package',
+            contractNumber: 'CO-2024-CI-002',
+            parentContractId: 'SOW-2024-CI-001',
+            firstParty: 'TechCorp Enterprise Solutions',
+            thirdParty: 'CloudVault Technologies Inc.',
+            effectiveDate: '2024-07-01',
+            expirationDate: '2026-01-31',
+            governingLaw: 'Delaware',
+            jurisdiction: 'Delaware State Courts',
+            paymentTerms: 'Net 45 days',
+            terminationClause: 'Tied to parent SOW termination provisions',
+            confidentialityClause: 'Same as parent SOW with additional performance data confidentiality',
+            indemnificationClause: 'Standard indemnification per MSA terms',
+            status: 'Active',
+            totalValue: 450000,
+            currency: 'USD',
+            industry: 'Business Services',
+            contractManager: 'Sarah Chen',
+            riskLevel: 'Medium',
+            businessUnit: 'Infrastructure & Operations',
+            projectCode: 'INFRA-2024-CI-SCALE',
+            deliverables: [
+              'Auto-scaling infrastructure for peak load management',
+              'Additional 200TB of high-performance storage',
+              'Geographic load balancing across 3 regions',
+              'Enhanced monitoring and analytics dashboard'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'SOW-2024-CI-DEV',
+        type: 'Sow',
+        title: 'Development & Testing Environment Services',
+        contractNumber: 'SOW-2024-CI-002',
+        parentContractId: 'MSA-2024-CI',
+        firstParty: 'TechCorp Enterprise Solutions',
+        thirdParty: 'CloudVault Technologies Inc.',
+        effectiveDate: '2024-03-01',
+        expirationDate: '2025-12-31',
+        governingLaw: 'Delaware',
+        jurisdiction: 'Delaware State Courts',
+        paymentTerms: 'Net 45 days',
+        terminationClause: '60 days written notice for development environments',
+        confidentialityClause: 'Development data and testing procedures confidential for 3 years',
+        indemnificationClause: 'Limited indemnification for development environment issues',
+        status: 'Active',
+        totalValue: 850000,
+        currency: 'USD',
+        industry: 'Business Services',
+        contractManager: 'Mike Rodriguez',
+        riskLevel: 'Medium',
+        businessUnit: 'Software Development',
+        projectCode: 'DEV-2024-CI',
+        deliverables: [
+          'Containerized development environments',
+          'CI/CD pipeline integration',
+          'Automated testing infrastructure',
+          'Developer self-service portal'
+        ]
+      }
+    ]
+  };
+
+  // Family 2: Global Marketing Campaign Management - MSA → SOW → Change Orders → Amendments
+  const marketingMSA: ContractData = {
+    id: 'MSA-2024-MKT-001',
+    type: 'Msa',
+    title: 'Master Service Agreement - Global Marketing Campaign Management',
+    contractNumber: 'MSA-2024-MKT',
+    firstParty: 'GlobalBrand Corporation',
+    thirdParty: 'CreativeEdge Marketing Solutions',
+    effectiveDate: '2024-01-01',
+    expirationDate: '2026-12-31',
+    governingLaw: 'New York',
+    jurisdiction: 'New York State Courts',
+    paymentTerms: 'Net 30 days',
+    terminationClause: '60 days written notice for convenience; immediate for breach after 15-day cure period',
+    confidentialityClause: 'Marketing strategies, customer data, and campaign performance metrics confidential for 7 years',
+    indemnificationClause: 'Agency indemnifies against IP infringement claims; Client indemnifies against brand/product liability',
+    status: 'Active',
+    totalValue: 4200000,
+    currency: 'USD',
+    industry: 'Business Services',
+    contractManager: 'Jessica Park',
+    renewalNotice: '120 days written notice of intent not to renew',
+    riskLevel: 'High',
+    vendorRating: 'A- (4.2/5.0)',
+    businessUnit: 'Global Marketing Division',
+    projectCode: 'MKT-2024-GLOBAL',
+    approvalAuthority: 'CMO Office',
+    complianceRequirements: ['GDPR', 'CCPA', 'Brand Compliance Guidelines'],
+    children: [
+      {
+        id: 'SOW-2024-MKT-DIGITAL',
+        type: 'Sow',
+        title: 'Digital Marketing Campaign Execution',
+        contractNumber: 'SOW-2024-MKT-001',
+        parentContractId: 'MSA-2024-MKT',
+        firstParty: 'GlobalBrand Corporation',
+        thirdParty: 'CreativeEdge Marketing Solutions',
+        effectiveDate: '2024-02-01',
+        expirationDate: '2024-12-31',
+        governingLaw: 'New York',
+        jurisdiction: 'New York State Courts',
+        paymentTerms: 'Net 30 days',
+        terminationClause: '30 days written notice during campaign execution',
+        confidentialityClause: 'Campaign creative assets and performance data confidential',
+        indemnificationClause: 'Enhanced IP indemnification for digital content creation',
+        status: 'Active',
+        totalValue: 1800000,
+        currency: 'USD',
+        industry: 'Business Services',
+        contractManager: 'Jessica Park',
+        riskLevel: 'High',
+        vendorRating: 'A- (4.2/5.0)',
+        businessUnit: 'Global Marketing Division',
+        projectCode: 'MKT-2024-DIGITAL',
+        deliverables: [
+          'Multi-platform digital advertising campaigns',
+          'Social media content creation and management',
+          'Search engine optimization and marketing',
+          'Influencer partnership coordination',
+          'Real-time performance analytics and reporting'
+        ],
+        keyMilestones: [
+          { date: '2024-03-01', description: 'Campaign strategy finalization', completed: true },
+          { date: '2024-04-15', description: 'Creative asset development', completed: true },
+          { date: '2024-05-01', description: 'Phase 1 launch (Americas)', completed: true },
+          { date: '2024-07-01', description: 'Phase 2 launch (EMEA)', completed: false },
+          { date: '2024-09-01', description: 'Phase 3 launch (APAC)', completed: false }
+        ],
+        children: [
+          {
+            id: 'CO-2024-MKT-INFLU',
+            type: 'ChangeOrder',
+            title: 'Premium Influencer Partnership Program',
+            contractNumber: 'CO-2024-MKT-001',
+            parentContractId: 'SOW-2024-MKT-001',
+            firstParty: 'GlobalBrand Corporation',
+            thirdParty: 'CreativeEdge Marketing Solutions',
+            effectiveDate: '2024-06-01',
+            expirationDate: '2024-12-31',
+            governingLaw: 'New York',
+            jurisdiction: 'New York State Courts',
+            paymentTerms: 'Net 30 days',
+            terminationClause: 'Tied to parent SOW termination, with 14-day notice for influencer contracts',
+            confidentialityClause: 'Enhanced confidentiality for influencer agreements and performance metrics',
+            indemnificationClause: 'Additional indemnification for influencer content and FTC compliance',
+            status: 'Active',
+            totalValue: 650000,
+            currency: 'USD',
+            industry: 'Business Services',
+            contractManager: 'Jessica Park',
+            riskLevel: 'High',
+            businessUnit: 'Global Marketing Division',
+            projectCode: 'MKT-2024-INFLU',
+            deliverables: [
+              'Tier-1 celebrity influencer partnerships',
+              'Micro-influencer network management',
+              'Content authenticity verification',
+              'FTC compliance monitoring and reporting'
+            ],
+            children: [
+              {
+                id: 'AMD-2024-MKT-INFLU-INT',
+                type: 'Amendment',
+                title: 'International Influencer Expansion',
+                contractNumber: 'AMD-2024-MKT-001',
+                parentContractId: 'CO-2024-MKT-001',
+                firstParty: 'GlobalBrand Corporation',
+                thirdParty: 'CreativeEdge Marketing Solutions',
+                effectiveDate: '2024-08-01',
+                expirationDate: '2024-12-31',
+                governingLaw: 'New York',
+                jurisdiction: 'New York State Courts',
+                paymentTerms: 'Net 30 days',
+                terminationClause: 'Follows parent Change Order provisions',
+                confidentialityClause: 'Additional confidentiality for international market strategies',
+                indemnificationClause: 'Expanded indemnification for international compliance requirements',
+                status: 'Active',
+                totalValue: 280000,
+                currency: 'USD',
+                industry: 'Business Services',
+                contractManager: 'Jessica Park',
+                riskLevel: 'High',
+                businessUnit: 'Global Marketing Division',
+                projectCode: 'MKT-2024-INFLU-INT',
+                complianceRequirements: ['GDPR', 'Local Advertising Standards'],
+                deliverables: [
+                  'European influencer network expansion',
+                  'APAC market influencer partnerships',
+                  'Multi-language content localization',
+                  'Regional compliance verification'
+                ]
+              },
+              {
+                id: 'AMD-2024-MKT-INFLU-PERF',
+                type: 'Amendment',
+                title: 'Performance Bonus Structure Enhancement',
+                contractNumber: 'AMD-2024-MKT-002',
+                parentContractId: 'CO-2024-MKT-001',
+                firstParty: 'GlobalBrand Corporation',
+                thirdParty: 'CreativeEdge Marketing Solutions',
+                effectiveDate: '2024-09-15',
+                expirationDate: '2024-12-31',
+                governingLaw: 'New York',
+                jurisdiction: 'New York State Courts',
+                paymentTerms: 'Net 30 days for base; Net 15 days for performance bonuses',
+                terminationClause: 'Performance metrics evaluation required before termination',
+                confidentialityClause: 'Performance benchmarks and bonus calculations confidential',
+                indemnificationClause: 'Standard per parent Change Order',
+                status: 'Active',
+                totalValue: 150000,
+                currency: 'USD',
+                industry: 'Business Services',
+                contractManager: 'Jessica Park',
+                riskLevel: 'Medium',
+                businessUnit: 'Global Marketing Division',
+                projectCode: 'MKT-2024-INFLU-PERF',
+                performanceMetrics: [
+                  'Engagement rate targets >4.5%',
+                  'Conversion rate targets >2.8%',
+                  'Brand awareness lift targets >15%',
+                  'Cost per acquisition targets <$125'
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+
+  return [cloudInfraMSA, marketingMSA];
+};
+
+// Export the processed contract data with synthetic families
+export const realContractFamilies = [...buildContractHierarchy(), ...createSyntheticContractFamilies()];
 
 // Get all contracts (including children) for filtering
 const getAllContracts = (contracts: ContractData[]): ContractData[] => {

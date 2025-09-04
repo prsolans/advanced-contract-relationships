@@ -9,18 +9,22 @@ import FamilyDashboard from './FamilyDashboard';
 const ContractFamilyViewer: React.FC = () => {
   const { family } = useParams<{ family: string }>();
   
-  // Convert URL parameter to family ID (e.g., "msa-99119-family" -> "MSA-99119")
+  // Convert URL parameter to family ID (e.g., "msa-99119-family" -> "MSA-99119" or "msa-2024-ci-family" -> "MSA-2024-CI")
   const familyId = family ? 
     family.split('-')
-      .map((part, index) => {
+      .map((part, index, array) => {
+        if (index === array.length - 1 && part.toLowerCase() === 'family') {
+          return ''; // Remove "family" suffix
+        }
         if (index === 0) return part.toUpperCase(); // MSA, CN, etc.
-        if (index === family.split('-').length - 1) return ''; // Remove "family" suffix
-        return part; // Keep numbers as-is
+        // Keep numbers as-is, uppercase letters for other parts
+        return isNaN(Number(part)) ? part.toUpperCase() : part;
       })
       .filter(Boolean)
       .join('-') : '';
   
   const contractFamily = contractFamilies.find(f => f.id === familyId);
+  
   const contracts = contractFamily ? [contractFamily.masterAgreement] : [];
   const enhancedContracts = contractFamily ? getEnhancedFamilyContracts(contractFamily.id) : [];
 

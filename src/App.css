@@ -795,6 +795,85 @@ body {
   padding: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+}
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 100;
+  padding: 12px 24px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+
+.sticky-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sticky-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sticky-family-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.sticky-parties {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.sticky-party {
+  font-weight: 500;
+}
+
+.sticky-separator {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.sticky-right {
+  display: flex;
+  align-items: center;
+}
+
+.sticky-relationship-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 10px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .family-header {
@@ -1174,6 +1253,102 @@ body {
   font-style: italic;
 }
 
+/* Additional Contract Detail Styles */
+.code-highlight {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 12px;
+  color: #475569;
+}
+
+.risk-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.risk-badge.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.risk-badge.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.risk-badge.high {
+  background: #fecaca;
+  color: #dc2626;
+}
+
+.risk-badge.critical {
+  background: #fca5a5;
+  color: #991b1b;
+}
+
+.rating-highlight {
+  font-weight: 600;
+  color: #059669;
+}
+
+.legal-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #475569;
+  max-width: 400px;
+}
+
+.compliance-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.detail-section .compliance-badge {
+  padding: 4px 10px;
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Renewal and Expiration Warning Styles */
+.expiration-warning {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.renewal-notice-urgent {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.urgency-indicator {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.expiration-warning .urgency-indicator {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+.renewal-notice-urgent .urgency-indicator {
+  background: #fed7aa;
+  color: #c2410c;
+}
+
 /* Header Main Row Layout */
 .header-main-row {
   display: flex;
@@ -1255,7 +1430,7 @@ body {
 
 .tooltip {
   position: absolute;
-  z-index: 1000;
+  z-index: 9999;
   padding: 12px 16px;
   background: #1e293b;
   color: white;
@@ -1266,7 +1441,8 @@ body {
   min-width: 400px;
   white-space: normal;
   word-wrap: break-word;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #374151;
 }
 
 .tooltip-top {
