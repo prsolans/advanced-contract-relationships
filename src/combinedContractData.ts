@@ -1,6 +1,6 @@
 import { ContractData, ContractFamily } from './types';
 import { contractFamilies } from './contractFamilyData';
-import { procurementContracts, manufacturingContracts, healthcareContracts } from './industryData';
+import { procurementContracts, manufacturingContracts, healthcareContracts, constructionContracts, financialContracts } from './industryData';
 import { sampleContracts } from './sampleData';
 import { getEnhancedFamilyContracts } from './contractFamilyData';
 
@@ -123,6 +123,8 @@ const convertToContractFamily = (contracts: ContractData[], familyId: string): C
 const procurementFamily = convertToContractFamily(procurementContracts, 'PROC-MSA-001');
 const manufacturingFamily = convertToContractFamily(manufacturingContracts, 'MFG-MSA-001');
 const healthcareFamily = convertToContractFamily(healthcareContracts, 'HC-MSA-001');
+const constructionFamily = convertToContractFamily(constructionContracts, 'CONST-PC-001');
+const financialFamily = convertToContractFamily(financialContracts, 'FIN-MTA-001');
 const sampleFamily = convertToContractFamily(sampleContracts, 'MSA-001');
 
 // Get the existing real contract families (MSA-99119, MSA-2024-CI, MSA-2024-MKT)
@@ -136,6 +138,8 @@ export const combinedContractFamilies: ContractFamily[] = [
   procurementFamily,
   manufacturingFamily,
   healthcareFamily,
+  constructionFamily,
+  financialFamily,
   sampleFamily
 ];
 
@@ -186,25 +190,47 @@ export const combinedFamilyDescriptions: { [key: string]: any } = {
     ]
   },
   'MFG-MSA-001': {
-    title: 'Manufacturing Services Family',
-    hierarchy: 'MSA → SOW → Change Orders',
-    description: 'Manufacturing and supply chain management contracts with quality assurance and delivery requirements.',
+    title: 'Defense Manufacturing Family',
+    hierarchy: 'Prime Contract → Subcontract MSAs → Purchase Orders',
+    description: 'Defense systems manufacturing with federal compliance, subcontractor management, and component procurement.',
     keyFeatures: [
-      'Manufacturing process optimization',
-      'Quality assurance frameworks',
-      'Supply chain integration',
-      'Performance metrics tracking'
+      '$125M defense systems contract',
+      'ITAR, DFARS, CMMC Level 3 compliance',
+      'Multi-tier subcontracting structure',
+      'Federal acquisition regulations (FAR)'
     ]
   },
   'HC-MSA-001': {
-    title: 'Healthcare Services Family',
-    hierarchy: 'MSA → SOW → Change Orders',
-    description: 'Healthcare technology and services with strict regulatory compliance and patient data protection.',
+    title: 'Healthcare Network Family',
+    hierarchy: 'Master Affiliation → Facility Agreements → Physician Agreements',
+    description: 'Healthcare network affiliation with facility partnerships and physician service agreements.',
     keyFeatures: [
+      'Regional healthcare network integration',
       'HIPAA compliance requirements',
-      'Patient data protection',
-      'Healthcare technology integration',
-      'Regulatory oversight'
+      'Multi-facility service coordination',
+      'Physician compensation structures'
+    ]
+  },
+  'CONST-PC-001': {
+    title: 'Construction & Infrastructure Family',
+    hierarchy: 'Prime Contract → Subcontract → Trade Agreement → Construction Amendment',
+    description: 'Large-scale commercial construction project with prime contractors, subcontractors, trade agreements, and specialized construction amendments.',
+    keyFeatures: [
+      '$85M commercial construction project',
+      'AIA Standard forms and Construction Lien Law compliance',
+      'Multi-tier subcontracting structure',
+      'Construction-specific amendments and change orders'
+    ]
+  },
+  'FIN-MTA-001': {
+    title: 'Financial Services & Trading Family',
+    hierarchy: 'Master Trading Agreement → Product Schedule → Transaction Confirmation → Novation',
+    description: 'Sophisticated financial instruments and trading relationships with ISDA frameworks, product schedules, and transaction confirmations.',
+    keyFeatures: [
+      'ISDA master agreement frameworks',
+      'Multi-asset class product structuring',
+      'Real-time transaction confirmation and settlement',
+      'Regulatory compliance and risk management'
     ]
   },
   'MSA-001': {
