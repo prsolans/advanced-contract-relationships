@@ -6,13 +6,29 @@ const Homepage: React.FC = () => {
   return (
     <div className="homepage">
       <header className="homepage-header">
-        <h1>Master Service Agreement Families</h1>
+        <h1>Meet CHARM</h1>
         <p className="homepage-subtitle">
-          Explore multi-tier MSA contract hierarchies with SOWs and Change Orders
+          Contract Hierarchy Analysis and Relationship Mapping
         </p>
+        <div className="value-proposition">
+          <div className="value-bucket">
+            <h3>🔍 Complete Visibility</h3>
+            <p>Navigate intricate multi-level document hierarchies spanning from master agreements through statements of work to change orders and amendments with unprecedented clarity.</p>
+          </div>
+          <div className="value-bucket">
+            <h3>⚖️ Smart Governance</h3>
+            <p>Discover inheritance patterns, governance frameworks, and compliance requirements that drive your organization's contractual obligations across entire contract families.</p>
+          </div>
+          <div className="value-bucket">
+            <h3>📊 Informed Decisions</h3>
+            <p>Empower legal teams, contract managers, and business leaders with instant visibility into risk levels, performance metrics, and financial impacts.</p>
+          </div>
+        </div>
       </header>
 
-      <div className="industry-grid">
+      <section className="family-section">
+        <h2 className="section-headline">Explore Hierarchies</h2>
+        <div className="industry-grid">
         {Object.entries(combinedFamilyDescriptions).map(([contractFamily, details]) => (
           <Link 
             key={contractFamily} 
@@ -46,7 +62,8 @@ const Homepage: React.FC = () => {
             </div>
           </Link>
         ))}
-      </div>
+        </div>
+      </section>
 
       <footer className="homepage-footer">
         <div className="stats-grid">

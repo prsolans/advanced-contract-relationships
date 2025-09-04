@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ContractData, EnhancedContractData } from '../types';
 import { combinedContractFamilies, getCombinedEnhancedContracts } from '../combinedContractData';
@@ -35,6 +35,12 @@ const ContractFamilyViewer: React.FC = () => {
     enhancedContracts[0] || null
   );
 
+  // Scroll to top when component mounts or family changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [family]);
+
+
   const handleContractSelect = (contract: ContractData) => {
     setSelectedContract(contract);
     // Find the corresponding enhanced contract
@@ -58,6 +64,19 @@ const ContractFamilyViewer: React.FC = () => {
 
   return (
     <div className="integrated-family-viewer">
+      {/* Sticky Header */}
+      <div className="sticky-header visible">
+        <div className="sticky-content">
+          <Link to="/" className="sticky-charm-link">CHARM</Link>
+          <div className="sticky-family-info">
+            <span className="sticky-family-name">{contractFamily.id} Family</span>
+            <span className="sticky-parties">
+              {contractFamily.businessContext.parties[0]?.name_in_agreement} ↔ {contractFamily.businessContext.parties[1]?.name_in_agreement}
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="family-header">
         <div className="breadcrumb">

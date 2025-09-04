@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ContractFamily } from '../types';
 import Tooltip from './Tooltip';
 
@@ -7,17 +7,6 @@ interface FamilyDashboardProps {
 }
 
 const FamilyDashboard: React.FC<FamilyDashboardProps> = ({ family }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 100);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
@@ -57,25 +46,6 @@ const FamilyDashboard: React.FC<FamilyDashboardProps> = ({ family }) => {
 
   return (
     <div className="family-dashboard">
-      {/* Sticky Header */}
-      <div className={`sticky-header ${isScrolled ? 'visible' : ''}`}>
-        <div className="sticky-content">
-          <div className="sticky-left">
-            <h1 className="sticky-family-title">{family.id} Contract Family</h1>
-            <div className="sticky-parties">
-              <span className="sticky-party">{family.businessContext.parties[0]?.name_in_agreement}</span>
-              <span className="sticky-separator">↔</span>
-              <span className="sticky-party">{family.businessContext.parties[1]?.name_in_agreement}</span>
-            </div>
-          </div>
-          <div className="sticky-right">
-            <div className="sticky-relationship-badge" style={{ backgroundColor: getRelationshipColor(family.businessContext.relationshipType) }}>
-              {family.businessContext.relationshipType}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="family-header">
         <div className="header-main-row">
           <div className="family-title-section">

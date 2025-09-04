@@ -4,6 +4,7 @@ import './App.css';
 import Homepage from './components/Homepage';
 import IndustryViewer from './components/IndustryViewer';
 import ContractFamilyViewer from './components/ContractFamilyViewer';
+import AppFooter from './components/AppFooter';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/contracts/:family" element={<ContractFamilyViewer />} />
           <Route path="/industry/:industry" element={<IndustryViewer />} />
         </Routes>
+        <AppFooter />
       </div>
     </Router>
   );
