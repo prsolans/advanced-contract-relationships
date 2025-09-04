@@ -102,40 +102,20 @@ const FamilyDashboard: React.FC<FamilyDashboardProps> = ({ family }) => {
               <h3>Governance Framework</h3>
               <div className="governance-grid">
                 <div className="governance-item">
-                  <Tooltip content="Governing law is inherited from the Master Service Agreement (MSA) and applies to all contracts in the family unless specifically overridden in individual SOWs or Change Orders.">
-                    <div className="tooltip-trigger">
-                      <label>Governing Law:</label>
-                      <div className="help-icon">?</div>
-                    </div>
-                  </Tooltip>
+                  <label>Governing Law:</label>
                   <span>{family.governanceFramework.governingLaw}</span>
                 </div>
                 <div className="governance-item">
-                  <Tooltip content="Jurisdiction defines the court system that has authority over disputes. This is typically established in the MSA and cascades down to all related contracts in the family.">
-                    <div className="tooltip-trigger">
-                      <label>Jurisdiction:</label>
-                      <div className="help-icon">?</div>
-                    </div>
-                  </Tooltip>
+                  <label>Jurisdiction:</label>
                   <span>{family.governanceFramework.jurisdiction}</span>
                 </div>
                 <div className="governance-item">
-                  <Tooltip content="Default payment terms from the MSA. Individual SOWs may override these terms for specific projects, but this represents the standard payment schedule for the business relationship.">
-                    <div className="tooltip-trigger">
-                      <label>Payment Terms:</label>
-                      <div className="help-icon">?</div>
-                    </div>
-                  </Tooltip>
+                  <label>Payment Terms:</label>
                   <span>{family.governanceFramework.defaultPaymentTerms}</span>
                 </div>
                 {family.governanceFramework.terminationRights && (
                   <div className="governance-item">
-                    <Tooltip content="Termination rights and procedures established in the MSA. These define how either party can end the contractual relationship and what notice periods are required.">
-                      <div className="tooltip-trigger">
-                        <label>Termination:</label>
-                        <div className="help-icon">?</div>
-                      </div>
-                    </Tooltip>
+                    <label>Termination:</label>
                     <span>{family.governanceFramework.terminationRights}</span>
                   </div>
                 )}
